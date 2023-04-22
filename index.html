@@ -106,6 +106,8 @@
             font-weight: 1000;
             list-style: none;
             font-size: 20px;
+            cursor: pointer;
+            transition: 0.4s all ease;
         }
         .ul_nav * {
             -webkit-box-sizing: border-box;
@@ -122,6 +124,7 @@
         .ul_nav a:hover,
         .ul_nav .home a{
             color: #000000;
+            transition: 0.4s all ease;
         }
         .ul_nav a:hover:before,
         .ul_nav .home a:before,
@@ -130,6 +133,22 @@
             -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
             opacity: 1;
+        }
+        .ul_nav a:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #fc302b;
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+        .ul_nav a:hover::after{
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
         html {
             overflow: scroll;
@@ -141,7 +160,9 @@
             }
             /* optional: show position indicator in red */
             ::-webkit-scrollbar-thumb {
-            background: #fc302b;
+            width: 0px;
+            height: 0px;
+            background: rgba(221, 221, 221, 0.5);
             }
         @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
 
@@ -164,13 +185,10 @@
             color: #08090a;
             display: grid;
             place-items: center;
-            background-color: #d0d0d0;
+
             font-family: var(--font);
-            background-color: #fff;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top center;
-            background-blend-mode: overlay;
+            background: linear-gradient(90deg, rgb(180, 180, 180) 0%, rgba(255, 255, 255, 0.753) 50%);
+
             padding: 0 80px;
             
             @media (max-width: 1200px) {
@@ -659,8 +677,7 @@
     <form>
         
         <div class="ul_nav">
-            <li><input type="text" id="login" name="login" placeholder="Логин"></li>
-            <li><input type="password" id="password" name="password" placeholder="Пароль"></li>
+            <li><a href="login.html">Авторизация</a><li>
             <li><a href="catalog">Каталог</a></li>
             <li><a href="order">Заказ</a></li>
             <li><a href="shop">Магазины</a></li>
