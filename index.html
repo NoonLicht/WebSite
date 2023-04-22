@@ -54,19 +54,6 @@
         html{
             scroll-behavior: smooth;
         }
-        form{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-top: 20px;
-            position: relative;
-            background: #FFFFFF;
-            max-width: auto;
-            padding: 5px;
-            text-align: center;
-            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-            border-radius: 15px;
-        }
         form1{
             display: flex;
             flex-direction: row;
@@ -132,32 +119,6 @@
             padding: 0.5rem 0.8rem;
             text-decoration: none;
         }
-        .ul_nav a:before,
-        .ul_nav a:after {
-            position: absolute;
-            height: 15px;
-            width: 15px;
-            content: '';
-            -webkit-transition: all 0.35s ease;
-            transition: all 0.35s ease;
-            opacity: 0;
-        }
-        .ul_nav a:before{
-            right: 0;
-            top: 0;
-            border-right: 5px solid #fc302b;
-            border-top: 5px solid #fc302b;
-            -webkit-transform: translate(-100%, 50%);
-            transform: translate(-100%, 50%)
-        }
-        .ul_nav a:after{
-            left: 0;
-            bottom: 0;
-            border-left: 5px solid #fc302b;
-            border-bottom: 5px solid #fc302b;
-            -webkit-transform: translate(100%, -50%);
-            transform: translate(100%, -50%)
-        }
         .ul_nav a:hover,
         .ul_nav .home a{
             color: #000000;
@@ -195,7 +156,7 @@
           }
           
           img {
-            max-width: 80%;
+            max-width: 70%;
           }
           body {
             height: 100vh;
@@ -205,7 +166,7 @@
             place-items: center;
             background-color: #d0d0d0;
             font-family: var(--font);
-            background-image: url("https://images.unsplash.com/photo-1598322508096-5ca34544d8aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80");
+            background-color: #fff;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top center;
@@ -217,11 +178,11 @@
             }
           }
           .container {
-            max-width: 1900px;
+            max-width: 1500px;
             border-radius: 6px;
             overflow-x: none;
             overflow-y: hidden;
-            max-height: 980px;
+            max-height: 800px;
             height: 90vh;
             width: 100%;
             display: flex;
@@ -292,7 +253,7 @@
         }
         .cover {
             background-image: url("https://img2.rudalle.ru/images/d1/30/cf/d130cf92b9744ef58ba31445bf037214_00000.jpg");
-            width: 500px;
+            width: 400px;
             display: flex;
             justify-content: center;
             font-size: 48px;
@@ -314,7 +275,7 @@
             align-items: center;
             padding: 36px;
             background-color: #fff;
-            width: 500px;
+            width: 400px;
             overflow-y: auto;
             scroll-behavior: smooth;
             transition: 0.6s;
@@ -671,8 +632,24 @@
         .container:not(.container--detail) .product:hover .product__img {
         transform: scale(1.07);
         }
-
-
+        input{
+            width: auto;
+            height: 25px;
+            border-radius: 5px;
+            padding: none;
+            font-size: large;
+            position: absolute;
+            top: 70px; left:30px;
+        }
+        input[type="text"]{
+            width: auto;
+            height: 25px;
+            border-radius: 5px;
+            padding: none;
+            font-size: large;
+            position: absolute;
+            top: 30px; left:30px;
+        }
 
     </style>
 
@@ -680,15 +657,16 @@
 <body>
     <h1></h1>
     <form>
+        
         <div class="ul_nav">
-            <li><a href="login.html">Авторизация</a></li>
+            <li><input type="text" id="login" name="login" placeholder="Логин"></li>
+            <li><input type="password" id="password" name="password" placeholder="Пароль"></li>
             <li><a href="catalog">Каталог</a></li>
             <li><a href="order">Заказ</a></li>
             <li><a href="shop">Магазины</a></li>
-            <li><a href="contacts">Контакты</a></li>
-            <li><a href="about_us">О нас</a></li>
         </div>
     </form>
+    <h1></h1>
     <form1>
         <section id="section-1">
             <div class="container">
@@ -944,8 +922,7 @@
                 <div class="product__subtitle">Проводные наушники Sennheiser HD 660 S, представленные в черном цвете, характеризуются высочайшим качеством звука и
                 функциональной конструкцией. Мягкое оголовье наушников позволяет находиться в них очень долго и при этом не испытывать
                 дискомфорта.Овальные амбушюры из микрофибры плотно и мягко прилегают к ушам, не пропуская посторонние звуки. Открытое акустическое
-                оформление предполагает максимально естественное звучание. При этом диапазон воспроизводимых частот колеблется в
-                пределах 10-41000 Гц.</div>
+                оформление предполагает максимально естественное звучание.</div>
                 <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура Bose QuietComfort
                     45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
                     удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с мобильной
