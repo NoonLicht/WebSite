@@ -1,0 +1,4309 @@
+/* www.dns-shop.ru by html.to.design ❤️ FREE version - 24/04/2023, 22:05:18 GMT+3 */
+
+position: relative;
+width: 1920px;
+height: 2395.48px;
+
+background: #F6F6F6;
+
+
+/* div#base-header */
+
+position: absolute;
+width: 1920px;
+height: 195px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* div#header-desktop */
+
+position: absolute;
+width: 1920px;
+height: 195px;
+left: 0px;
+top: 0px;
+
+
+
+/* div.header-top */
+
+position: absolute;
+height: 49px;
+left: 0px;
+right: 0px;
+top: 50px;
+
+background: #FFFFFF;
+
+
+/* div.header-top__container */
+
+position: absolute;
+width: 1180px;
+height: 49px;
+left: calc(50% - 1180px/2);
+top: 0px;
+
+
+
+/* ul.header-top-menu__common-list */
+
+position: absolute;
+width: 843.27px;
+height: 21px;
+left: 0px;
+top: 20px;
+
+
+
+/* div.city-select__label_bIu */
+
+position: absolute;
+width: 74.03px;
+height: 21px;
+left: 0px;
+top: 0px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 14px;
+height: 14px;
+left: 0px;
+top: 18px;
+
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 35.35%;
+top: 90.28%;
+bottom: -71.53%;
+
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 35.35%;
+top: 90.28%;
+bottom: -71.53%;
+
+background: #4E4E4E;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+
+/* span.city-select__text_BTU */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 0px 1px;
+
+position: absolute;
+width: 53px;
+height: 22px;
+left: 22px;
+top: -1px;
+
+
+
+/* Москва */
+
+width: 53px;
+height: 21px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* a.header-top-menu__common-link */
+
+position: absolute;
+width: 62.53px;
+height: 21px;
+left: 300px;
+top: 0px;
+
+
+
+/* Акции */
+
+position: absolute;
+width: 44px;
+height: 21px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* svg.header-top-menu__dot-svg */
+
+position: absolute;
+width: 5px;
+height: 10px;
+left: 47.53px;
+top: 6px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 5px;
+height: 10px;
+left: calc(50% - 5px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 25%;
+bottom: 25%;
+
+background: #FFA319;
+
+
+/* Магазины */
+
+position: absolute;
+width: 70px;
+height: 21px;
+left: 384.53px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* li.header-top-menu__common-item */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 14.58px 1px 0px;
+isolation: isolate;
+
+position: absolute;
+width: 105.58px;
+height: 22px;
+left: 475.97px;
+top: -1px;
+
+
+
+/* Покупателям */
+
+width: 91px;
+height: 21px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* svg.header-top-menu__arrow-svg */
+
+position: absolute;
+width: 15px;
+height: 24px;
+right: 0px;
+top: 1px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Frame */
+
+position: absolute;
+width: 15px;
+height: 24px;
+left: calc(50% - 15px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 41.09%;
+bottom: 39.62%;
+
+background: #AFAFAF;
+
+
+/* Юридическим лицам */
+
+position: absolute;
+width: 147px;
+height: 21px;
+left: 606.55px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* Клуб DNS */
+
+position: absolute;
+width: 68px;
+height: 21px;
+left: 775.42px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* li.header-top-menu__info */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 0px 1px;
+gap: 3.92px;
+
+position: absolute;
+width: 243.92px;
+height: 22px;
+left: 936.08px;
+top: calc(50% - 22px/2 + 5.5px);
+
+
+
+/* 8-800-77-07-999 */
+
+width: 117px;
+height: 21px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* (с 03:00 до 22:00) */
+
+width: 123px;
+height: 21px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* nav#header-search */
+
+position: absolute;
+width: 1920px;
+height: 96px;
+left: 0px;
+top: 99px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+
+
+/* div.header-bottom__container */
+
+position: absolute;
+width: 1180px;
+height: 64px;
+left: calc(50% - 1180px/2);
+top: calc(50% - 64px/2);
+
+
+
+/* div.header-bottom__wrapper-logo */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10.08px 12px 10.08px 20px;
+gap: 44px;
+
+position: absolute;
+width: 280.33px;
+height: 64px;
+left: 0px;
+top: calc(50% - 64px/2);
+
+background: linear-gradient(0deg, #FC8507 0%, #FFA218 100%);
+border-radius: 12px;
+
+
+/* div#header-logo */
+
+width: 80px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* image */
+
+position: absolute;
+width: 80px;
+height: 20px;
+left: 0px;
+top: calc(50% - 20px/2);
+
+
+
+/* Vector */
+
+position: absolute;
+left: 1.61%;
+right: 1.61%;
+top: 0%;
+bottom: 2.68%;
+
+background: #FFFFFF;
+
+
+/* span.header-bottom__catalog-spoiler */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9.5px 49.33px 11.34px 19px;
+isolation: isolate;
+
+width: 124.33px;
+height: 43.84px;
+
+background: rgba(255, 255, 255, 0.12);
+box-shadow: 0px 6px 8px rgba(89, 16, 0, 0.08);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Каталог */
+
+width: 56px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* svg.header-bottom__arrow-svg */
+
+position: absolute;
+width: 24px;
+height: 24px;
+right: 17px;
+top: 11px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Frame */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: calc(50% - 24px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 35.74%;
+bottom: 33.4%;
+
+background: #FFFFFF;
+
+
+/* div.presearch__wrapper */
+
+position: absolute;
+width: 533.7px;
+left: 300.33px;
+top: 0px;
+bottom: 0px;
+
+background: #F7F7F7;
+border-radius: 8px;
+
+
+/* input.presearch__input */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #F7F7F7;
+border-radius: 12px;
+
+
+/* div#placeholder */
+
+position: absolute;
+width: 389.7px;
+height: 20px;
+left: 20px;
+top: 22px;
+
+
+
+/* Поиск по сайту */
+
+position: absolute;
+width: 106.33px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+align-items: center;
+
+color: #757575;
+
+
+
+/* svg */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: calc(50% - 17px/2 + 232.85px);
+top: 24px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: calc(50% - 17px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.84%;
+right: 5.26%;
+top: 8.83%;
+bottom: 5.26%;
+
+border: 1.34211px solid #AFAFAF;
+
+
+/* div.header-bottom__nav-wrapper */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+position: absolute;
+width: 316.97px;
+height: 64px;
+left: 863.03px;
+top: calc(50% - 64px/2);
+
+
+
+/* div.buttons */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 250.97px;
+height: 64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* a.compare-link-counter */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 10px 10.5px 10px 11px;
+gap: 4px;
+isolation: isolate;
+
+width: 88.5px;
+height: 64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* svg */
+
+width: 22px;
+height: 22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Frame */
+
+position: absolute;
+width: 22px;
+height: 22px;
+left: calc(50% - 22px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 4.17%;
+right: 4.16%;
+top: 4.17%;
+bottom: 4.17%;
+
+background: #AFAFAF;
+
+
+/* Сравнение */
+
+width: 67px;
+height: 18px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 0;
+
+
+/* a.wishlist-link-counter */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 10px 10.47px 10px 11px;
+gap: 4px;
+isolation: isolate;
+
+width: 89.47px;
+height: 64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* svg */
+
+width: 22px;
+height: 22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Frame */
+
+position: absolute;
+width: 22px;
+height: 22px;
+left: calc(50% - 22px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 1.25%;
+right: 1.25%;
+top: 6.25%;
+bottom: 7.5%;
+
+background: #AFAFAF;
+
+
+/* Избранное */
+
+width: 68px;
+height: 18px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 0;
+
+
+/* a.buttons__link */
+
+width: 73px;
+height: 64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Корзина */
+
+position: absolute;
+width: 52px;
+height: 18px;
+left: 10.98px;
+top: 36px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* svg */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 24.5px;
+top: 10px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: calc(50% - 24px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 9.38%;
+right: 10.87%;
+top: 9.38%;
+bottom: 12.5%;
+
+background: #AFAFAF;
+
+
+/* div.user-menu */
+
+width: 46px;
+height: 44px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* div.user-profile__login */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 2px 0px 0px;
+gap: 4px;
+
+position: absolute;
+width: 37px;
+height: 44px;
+left: calc(50% - 37px/2 + 0.22px);
+top: calc(50% - 44px/2);
+
+
+
+/* svg */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: calc(50% - 20px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 1.25%;
+right: 0%;
+top: 1.25%;
+bottom: 0%;
+
+background: #AFAFAF;
+
+
+/* Войти */
+
+width: 37px;
+height: 18px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* div.user-notifications__counter */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 1px 4.69px 1px 3.31px;
+
+position: absolute;
+height: 15px;
+left: 28px;
+right: 2px;
+top: -1px;
+
+background: #FFA319;
+border-radius: 50px;
+
+
+/* 1 */
+
+width: 8px;
+height: 13px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 13px;
+/* identical to box height, or 100% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* div#top-banner */
+
+position: absolute;
+height: 50px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+
+
+/* a.top-banner__link */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #FFFFFF;
+
+
+/* c2175afbf2a7c57e27b1d14152c455c66dd3d9c0e31132d1a1d63a0e494e41d5.jpg */
+
+position: absolute;
+width: 1200px;
+height: 50px;
+left: calc(50% - 1200px/2);
+top: 0px;
+
+background: url(.jpg);
+
+
+/* div.top-banner__close-btn */
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 1873px;
+top: 8px;
+
+background: rgba(0, 0, 0, 0.3);
+border-radius: 17px;
+
+
+/* ✕ */
+
+position: absolute;
+width: 10.11px;
+height: 18.56px;
+left: 12.05px;
+top: 7.72px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 19px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* div.container */
+
+position: absolute;
+width: 1200px;
+height: 1536px;
+left: calc(50% - 1200px/2);
+top: 219px;
+
+
+
+/* ol.breadcrumb-list */
+
+position: absolute;
+width: 1180px;
+height: 18px;
+left: 10px;
+top: 0px;
+
+
+
+/* li.breadcrumb-list__item */
+
+position: absolute;
+width: 24.16px;
+height: 18px;
+left: 0px;
+top: 0px;
+
+background: #F6F6F6;
+
+
+/* DNS */
+
+position: absolute;
+width: 24.36px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 19px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* li.breadcrumb_last */
+
+position: absolute;
+width: 113.19px;
+height: 18px;
+left: 24.16px;
+top: 0px;
+
+background: #F6F6F6;
+
+
+/* > */
+
+position: absolute;
+width: 10.25px;
+height: 17px;
+left: 5px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 19px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #808080;
+
+
+
+/* Каталог товаров */
+
+position: absolute;
+width: 93.34px;
+height: 17px;
+left: 20.04px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 19px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #808080;
+
+
+
+/* pseudo */
+
+position: absolute;
+width: 80px;
+height: 18px;
+left: 1100px;
+top: 0px;
+
+background: linear-gradient(270deg, #F6F6F6 0%, rgba(255, 255, 255, 0) 100%);
+
+
+/* div.subcategory */
+
+position: absolute;
+width: 1180px;
+height: 1232px;
+left: 10px;
+top: 38px;
+
+
+
+/* Каталог товаров */
+
+position: absolute;
+width: 231.92px;
+height: 42px;
+left: 0px;
+top: -5px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 32px;
+/* or 100% */
+display: flex;
+align-items: center;
+
+color: #333333;
+
+
+
+/* div.subcategory__item-container */
+
+position: absolute;
+width: 1180px;
+height: 1180px;
+left: 0px;
+top: 52px;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* 2175345ce82b339090447d1ba41f7396d68e8ebc694caecb79f7544b0b372b19.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Бытовая техника */
+
+position: absolute;
+width: 119.83px;
+height: 20px;
+left: 50.19px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 300px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* 90c51a61886f58bae507cf8a31a78229dfed7c822e745989ad5748300299dc73.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Красота и здоровье */
+
+position: absolute;
+width: 139.06px;
+height: 20px;
+left: 40.56px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 600px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* 2aaaee8f9cf22a2eecd75ee28f9a88ec74ea03b26015438fb04590fd89d0da24.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Смартфоны и фототехника */
+
+position: absolute;
+width: 189.93px;
+height: 20px;
+left: 15.13px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 900px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* 7b8a5c451455d2c09e9891e428ffd196ce0821568705cbf4c82ef80a71161f3a.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* ТВ, консоли и аудио */
+
+position: absolute;
+width: 141.14px;
+height: 20px;
+left: 39.53px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 0px;
+top: 300px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* a233ea8a2c9ad8bcd719e885cd9b5474338ae756a1b1fc492310f9c1d4607038.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* ПК, ноутбуки, периферия */
+
+position: absolute;
+width: 177.28px;
+height: 20px;
+left: 21.45px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 300px;
+top: 300px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* a5bfd608589b06c177dc9e3ff35f8c4761ba8df3818648f48d386b09ae5cd7ba.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Комплектующие для ПК */
+
+position: absolute;
+width: 170.83px;
+height: 20px;
+left: 24.69px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 600px;
+top: 300px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* cc5aa264a759c9e3c2b31eb188364e858232272eb9050bba08e45256023b91f4.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Офис и мебель */
+
+position: absolute;
+width: 106px;
+height: 20px;
+left: 57.09px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 900px;
+top: 300px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* 91cb6e331adbca4ef08d278172c9f624fddcca89dc630d6aa56e9197061196ed.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Сетевое оборудование */
+
+position: absolute;
+width: 160.84px;
+height: 20px;
+left: 29.67px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 0px;
+top: 600px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* e3b18cbd89ca8fb1a81ce7e3745e440ddae049c6d7017eedd202dd20d4d6f922.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Отдых и развлечения */
+
+position: absolute;
+width: 152.23px;
+height: 20px;
+left: 33.98px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 300px;
+top: 600px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* bc57feef5c9d57d5fe85b908fd18ac2df8a18e3d48070886f1ad821734efad89.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Инструмент и стройка */
+
+position: absolute;
+width: 155.22px;
+height: 20px;
+left: 32.48px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 600px;
+top: 600px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* dc49ce25b5ec6957b941ad07efe6e6d18a5dc5512eb143fd0ff9367a20e3f131.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Садовая техника */
+
+position: absolute;
+width: 118.86px;
+height: 20px;
+left: 50.67px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 900px;
+top: 600px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* c47db22fca589db8ebff0f5d028cfacf93b955dc89128eb2d0c19aa064085998.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Дом, декор и посуда */
+
+position: absolute;
+width: 144.04px;
+height: 20px;
+left: 38.08px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 0px;
+top: 900px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* d123d2bcf90ea619ba36f554179eedee3aa4518e7856542638cf1a000e412906.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Автотовары */
+
+position: absolute;
+width: 84.04px;
+height: 20px;
+left: 68.08px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.subcategory__item */
+
+position: absolute;
+width: 280px;
+height: 280px;
+left: 300px;
+top: 900px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.subcategory__content */
+
+position: absolute;
+width: 220px;
+height: 225px;
+left: 30px;
+top: 30px;
+
+
+
+/* a84a885ed16051cefcc5d3694c02e7e279e9ac89ec08ac739a21631ff470a2ce.png */
+
+position: absolute;
+width: 120px;
+height: 120px;
+left: calc(50% - 120px/2);
+top: calc(50% - 120px/2 - 35.58px);
+
+background: url(.png);
+
+
+/* Аксессуары и услуги */
+
+position: absolute;
+width: 143.15px;
+height: 20px;
+left: 38.52px;
+top: 183.08px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #4E4E4E;
+
+
+
+/* div.popular-categories */
+
+position: absolute;
+height: 234px;
+left: 10px;
+right: 10px;
+top: 1302px;
+
+
+
+/* Популярные категории */
+
+position: absolute;
+width: 244px;
+height: 31px;
+left: 0px;
+top: -4px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 100% */
+display: flex;
+align-items: center;
+
+color: #333333;
+
+
+
+/* div#tns1 */
+
+position: absolute;
+width: 2336px;
+height: 132px;
+left: 0px;
+top: 40px;
+
+
+
+/* div.popular-categories__item-content */
+
+position: absolute;
+width: 280px;
+height: 132px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.popular-categories__description */
+
+position: absolute;
+height: 100.8px;
+left: 20px;
+right: 92px;
+top: 20px;
+
+
+
+/* a.popular-categories__title */
+
+position: absolute;
+width: 168px;
+height: 20.8px;
+left: 0px;
+top: 0px;
+
+
+
+/* Смартфоны */
+
+position: absolute;
+width: 82.45px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+/* or 130% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 28.8px;
+
+
+
+/* 2023 года */
+
+position: absolute;
+width: 63.08px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 52.8px;
+
+
+
+/* 2021 года */
+
+position: absolute;
+width: 63.08px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 76.8px;
+
+
+
+/* 2022 года */
+
+position: absolute;
+width: 63.08px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* e135e9e6c4903d49547578f57b15b674024b46ff9d0e74bea64556e46b0e7c42.jpg */
+
+position: absolute;
+width: 33px;
+height: 70px;
+left: 232px;
+top: calc(50% - 70px/2 - 16px);
+
+background: url(.jpg);
+
+
+/* div.popular-categories__item-content */
+
+position: absolute;
+width: 280px;
+height: 132px;
+left: 292px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.popular-categories__description */
+
+position: absolute;
+height: 100.8px;
+left: 20px;
+right: 92px;
+top: 20px;
+
+
+
+/* a.popular-categories__title */
+
+position: absolute;
+width: 168px;
+height: 20.8px;
+left: 0px;
+top: 0px;
+
+
+
+/* Ноутбуки */
+
+position: absolute;
+width: 66.28px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+/* or 130% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 28.8px;
+
+
+
+/* Игровые */
+
+position: absolute;
+width: 53.9px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 52.8px;
+
+
+
+/* Ультрабуки */
+
+position: absolute;
+width: 69.34px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 76.8px;
+
+
+
+/* Трансформеры */
+
+position: absolute;
+width: 93.06px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* 668811e2cfd11988e00d04b0ccb11da2757d3cdde29a6ed8a61f7f261ab4599b.png */
+
+position: absolute;
+width: 70px;
+height: 49px;
+left: 195px;
+top: calc(50% - 49px/2 - 26.5px);
+
+background: url(.png);
+
+
+/* div.popular-categories__item-content */
+
+position: absolute;
+width: 280px;
+height: 132px;
+left: 584px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.popular-categories__description */
+
+position: absolute;
+height: 100.8px;
+left: 20px;
+right: 92px;
+top: 20px;
+
+
+
+/* a.popular-categories__title */
+
+position: absolute;
+width: 168px;
+height: 20.8px;
+left: 0px;
+top: 0px;
+
+
+
+/* Телевизоры */
+
+position: absolute;
+width: 83.76px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+/* or 130% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 28.8px;
+
+
+
+/* Игровые */
+
+position: absolute;
+width: 53.9px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 52.8px;
+
+
+
+/* FHD */
+
+position: absolute;
+width: 25.5px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 76.8px;
+
+
+
+/* 4K UHD */
+
+position: absolute;
+width: 46.9px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* 26bee63ddd92c4d4246a69b5b9707300b1f7b83927528d1ad4b8ac9473affc79.png */
+
+position: absolute;
+width: 70px;
+height: 43px;
+left: 195px;
+top: calc(50% - 43px/2 - 29.5px);
+
+background: url(.png);
+
+
+/* div.popular-categories__item-content */
+
+position: absolute;
+width: 280px;
+height: 132px;
+left: 876px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* div.popular-categories__description */
+
+position: absolute;
+height: 100.8px;
+left: 20px;
+right: 92px;
+top: 20px;
+
+
+
+/* a.popular-categories__title */
+
+position: absolute;
+width: 168px;
+height: 20.8px;
+left: 0px;
+top: 0px;
+
+
+
+/* Видеокарты */
+
+position: absolute;
+width: 86.33px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+/* or 130% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 28.8px;
+
+
+
+/* Видеокарты AMD */
+
+position: absolute;
+width: 107.83px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 52.8px;
+
+
+
+/* Видеокарты Nvidia */
+
+position: absolute;
+width: 117px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* a.popular-categories__child */
+
+position: absolute;
+width: 168px;
+height: 16px;
+left: 0px;
+top: 76.8px;
+
+
+
+/* Видеокарты Intel */
+
+position: absolute;
+width: 106.76px;
+height: 18px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+/* or 114% */
+display: flex;
+align-items: center;
+
+color: #4E4E4E;
+
+
+
+/* 809d70b81f66d3f730c567c442e3ad98baeef227e15b2413dd3b0ca2c4afeca0.jpg */
+
+position: absolute;
+width: 70px;
+height: 70px;
+left: 195px;
+top: calc(50% - 70px/2 - 16px);
+
+background: url(.jpg);
+
+
+/* div.popular-categories__item-content */
+
+position: absolute;
+width: 280px;
+height: 132px;
+left: 1168px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+
+
+/* footer.footer */
+
+position: absolute;
+width: 1920px;
+height: 610.48px;
+left: 0px;
+top: 1785px;
+
+background: #333333;
+
+
+/* div.footer__container */
+
+position: absolute;
+width: 1180px;
+height: 610.48px;
+left: calc(50% - 1180px/2);
+top: 0px;
+
+
+
+/* div.footer__sites */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 42px 166px 42px 0px;
+gap: 63px;
+
+position: absolute;
+width: 1180px;
+height: 120.84px;
+left: 0px;
+top: 0px;
+
+
+
+/* div.footer__sites-left */
+
+width: 820px;
+height: 36.84px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* svg */
+
+position: absolute;
+width: 67px;
+height: 17px;
+left: 0px;
+top: 0px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 67px;
+height: 17px;
+left: calc(50% - 67px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0.92%;
+top: 0%;
+bottom: 0%;
+
+background: #F28A1E;
+
+
+/* svg */
+
+position: absolute;
+width: 111px;
+height: 17px;
+left: 303.3px;
+top: 0px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 111px;
+height: 17px;
+left: calc(50% - 111px/2);
+top: 0px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 40.2%;
+top: 0%;
+bottom: 0%;
+
+background: #F28A1E;
+
+
+/* Vector */
+
+position: absolute;
+left: 63.96%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #000000;
+
+
+/* Vector */
+
+position: absolute;
+left: 68.05%;
+right: 3.63%;
+top: 25.78%;
+bottom: 23.1%;
+
+background: #FFFFFF;
+
+
+/* svg */
+
+position: absolute;
+width: 157px;
+height: 17px;
+left: 566.59px;
+top: 0px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 157px;
+height: 17px;
+left: calc(50% - 157px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0.38%;
+top: 0%;
+bottom: 0%;
+
+background: #FC8507;
+
+
+/* svg */
+
+width: 131px;
+height: 17px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame */
+
+position: absolute;
+width: 131px;
+height: 17px;
+left: calc(50% - 131px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0.18%;
+top: 0%;
+bottom: 0%;
+
+background: #FF7D00;
+
+
+/* Vector */
+
+position: absolute;
+left: 62.04%;
+right: 7.07%;
+top: 24.33%;
+bottom: 24.33%;
+
+background: #FF7D00;
+
+
+/* div.footer__main */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 14px 0px 1px;
+gap: 63px;
+
+position: absolute;
+width: 1180px;
+height: 437.64px;
+left: 0px;
+top: 120.84px;
+
+border-bottom: 1px solid #444444;
+
+
+/* div.menu-links-desktop__wrapper */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 0px 20px;
+gap: 60px;
+
+width: 820px;
+height: 422.64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* div.navmenu__group */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 32px;
+gap: 19px;
+
+width: 246px;
+height: 402.64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* h6.navmenu__title */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 175px 21px 0px;
+
+width: 246px;
+height: 37px;
+
+border-bottom: 1px solid #4E4E4E;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Компания */
+
+width: 71px;
+height: 16px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 16px;
+/* identical to box height, or 100% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ul.navmenu__submenu */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 25px 12.84px 0px;
+gap: 11.85px;
+
+width: 246px;
+height: 314.64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* О Компании */
+
+width: 86px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Новости */
+
+width: 58px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Партнерам */
+
+width: 77px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Вакансии */
+
+width: 67px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Политика конфиденциальности */
+
+width: 221px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Персональные данные */
+
+width: 159px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Правила продаж */
+
+width: 117px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Правила пользования сайта */
+
+width: 196px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 7;
+flex-grow: 0;
+
+
+/* Сервисные центры */
+
+width: 133px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 8;
+flex-grow: 0;
+
+
+/* div.navmenu__group */
+
+width: 514px;
+height: 402.64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* h6.navmenu__title */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 514px;
+height: 37px;
+left: 0px;
+top: 0px;
+
+border-bottom: 1px solid #4E4E4E;
+
+
+/* Покупателям */
+
+position: absolute;
+width: 92.18px;
+height: 20px;
+left: 0px;
+top: -2px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 16px;
+/* or 100% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* ul.navmenu__submenu */
+
+position: absolute;
+width: 514px;
+height: 243.91px;
+left: 0px;
+top: 57px;
+
+
+
+/* Как оформить заказ */
+
+position: absolute;
+width: 141.26px;
+height: 20px;
+left: 0px;
+top: 1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Способы оплаты */
+
+position: absolute;
+width: 115.36px;
+height: 20px;
+left: 0px;
+top: 35.85px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Кредиты */
+
+position: absolute;
+width: 60.72px;
+height: 20px;
+left: 0px;
+top: 70.69px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Доставка */
+
+position: absolute;
+width: 63.95px;
+height: 20px;
+left: 0px;
+top: 105.54px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Статус заказа */
+
+position: absolute;
+width: 93.43px;
+height: 20px;
+left: 0px;
+top: 140.38px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Обмен, возврат, гарантия */
+
+position: absolute;
+width: 176.4px;
+height: 20px;
+left: 0px;
+top: 175.22px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Проверка статуса ремонта */
+
+position: absolute;
+width: 185.65px;
+height: 20px;
+left: 0px;
+top: 210.07px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Юридическим лицам */
+
+position: absolute;
+width: 147.08px;
+height: 20px;
+left: 265px;
+top: 1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Проверка счета */
+
+position: absolute;
+width: 110.09px;
+height: 20px;
+left: 265px;
+top: 35.85px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Корпоративные отделы */
+
+position: absolute;
+width: 163.97px;
+height: 20px;
+left: 265px;
+top: 70.69px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Подарочные карты */
+
+position: absolute;
+width: 133.4px;
+height: 20px;
+left: 265px;
+top: 105.54px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Бонусная программа */
+
+position: absolute;
+width: 146.11px;
+height: 20px;
+left: 265px;
+top: 140.38px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Помощь */
+
+position: absolute;
+width: 57.7px;
+height: 20px;
+left: 265px;
+top: 175.22px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Обратная связь */
+
+position: absolute;
+width: 108.42px;
+height: 20px;
+left: 265px;
+top: 210.07px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* div.menu-contacts */
+
+width: 297px;
+height: 422.64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* h6.menu-contacts__title */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 37px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+border-bottom: 1px solid #4E4E4E;
+
+
+/* Оставайтесь на связи */
+
+position: absolute;
+width: 149.83px;
+height: 20px;
+left: 0px;
+top: -2px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 16px;
+/* or 100% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* p.menu-contacts__phone-and-worktime */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 0px 0.84px;
+
+position: absolute;
+width: 252.84px;
+height: 23.84px;
+left: 0px;
+top: 57px;
+
+
+
+/* 8-800-77-07-999  */
+
+width: 125px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px -0.160004px;
+
+
+/* (c 03:00 до 22:00) */
+
+width: 128px;
+height: 23px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Адреса магазинов в г. Москва */
+
+position: absolute;
+width: 182.15px;
+height: 18px;
+left: 0px;
+top: 86.85px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* div.menu-contacts__social */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 0px 5.98px;
+gap: 8px;
+
+position: absolute;
+width: 84px;
+height: 43.98px;
+left: 0px;
+top: 281.68px;
+
+
+
+/* svg */
+
+width: 38px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame */
+
+position: absolute;
+width: 38px;
+height: 38px;
+left: calc(50% - 38px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #404040;
+
+
+/* Vector */
+
+position: absolute;
+left: 26.31%;
+right: 26.37%;
+top: 36.91%;
+bottom: 36.1%;
+
+background: #FFFFFF;
+
+
+/* svg */
+
+width: 38px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame */
+
+position: absolute;
+width: 38px;
+height: 38px;
+left: calc(50% - 38px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #404040;
+
+
+/* Vector */
+
+position: absolute;
+left: 23.68%;
+right: 21.05%;
+top: 31.74%;
+bottom: 29.37%;
+
+background: #FFFFFF;
+
+
+/* svg */
+
+position: absolute;
+width: 143px;
+height: 40px;
+left: 0px;
+top: 345.66px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 143px;
+height: 40px;
+left: calc(50% - 143px/2);
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0.54%;
+top: 0%;
+bottom: 0%;
+
+background: #404040;
+
+
+/* Vector */
+
+position: absolute;
+left: 30.11%;
+right: 7.3%;
+top: 42.61%;
+bottom: 15%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 7.34%;
+right: 83.13%;
+top: 18.67%;
+bottom: 18.65%;
+
+background: linear-gradient(207.29deg, #00A0FF 6.16%, #00A1FF 7.04%, #00BEFF 29.12%, #00D2FF 51.19%, #00DFFF 73.27%, #00E3FF 94.46%);
+
+
+/* Vector */
+
+position: absolute;
+left: 16.87%;
+right: 75.65%;
+top: 39.3%;
+bottom: 39.3%;
+
+background: linear-gradient(270deg, #FFE000 -7.69%, #FFBD00 90.02%, #FFA500 178.21%, #FF9C00 230.64%);
+
+
+/* Vector */
+
+position: absolute;
+left: 7.69%;
+right: 80.02%;
+top: 50%;
+bottom: 17.83%;
+
+background: linear-gradient(232.36deg, #FF3A44 15.53%, #C31162 169.54%);
+
+
+/* Vector */
+
+position: absolute;
+left: 7.69%;
+right: 80.02%;
+top: 17.83%;
+bottom: 50%;
+
+background: linear-gradient(127.65deg, #32A071 -34.15%, #2DA771 -29.34%, #15CF74 -1.14%, #06E775 20.86%, #00F076 34.62%);
+
+
+/* Vector */
+
+position: absolute;
+left: 7.69%;
+right: 80.02%;
+top: 60.32%;
+bottom: 17.84%;
+
+background: #000000;
+opacity: 0.2;
+
+
+/* Vector */
+
+position: absolute;
+left: 7.36%;
+right: 75.64%;
+top: 50%;
+bottom: 18.85%;
+
+background: #000000;
+opacity: 0.12;
+
+
+/* Vector */
+
+position: absolute;
+left: 7.35%;
+right: 75.64%;
+top: 17.85%;
+bottom: 50%;
+
+background: #FFFFFF;
+opacity: 0.25;
+
+
+/* Vector */
+
+position: absolute;
+left: 30.48%;
+right: 29.12%;
+top: 17.17%;
+bottom: 64.33%;
+
+background: #FFFFFF;
+border: 0.2px solid #FFFFFF;
+
+
+/* div.menu-contacts__subscription */
+
+position: absolute;
+width: 297px;
+height: 128.84px;
+left: 0px;
+top: 130.83px;
+
+
+
+/* Следите за новинками и акциями: */
+
+position: absolute;
+width: 237.61px;
+height: 20px;
+left: 0px;
+top: 1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* div.subscription__input-container */
+
+position: absolute;
+height: 46px;
+left: 0px;
+right: 17px;
+top: 30.85px;
+
+
+
+/* input.subscription__input */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 46px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+background: #FFFFFF;
+border: 1px solid #EEEEEE;
+border-radius: 8px;
+
+
+/* div#placeholder */
+
+position: absolute;
+width: 254px;
+height: 20px;
+left: 13px;
+top: 13px;
+
+
+
+/* Введите email и подпишитесь */
+
+position: absolute;
+width: 208.72px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+align-items: center;
+
+color: #757575;
+
+
+
+/* span.subscription__submit-icon */
+
+position: absolute;
+height: 45px;
+left: 241.83px;
+right: 1px;
+top: 1px;
+
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20%, #FFFFFF 100%);
+border-radius: 8px;
+
+
+/* ↵ */
+
+position: absolute;
+width: 13.37px;
+height: 26px;
+left: 12px;
+top: 10px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 46px;
+/* or 230% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #777777;
+
+
+
+/* div.subscription__policy */
+
+position: absolute;
+width: 280px;
+height: 42px;
+left: 0px;
+top: 86.85px;
+
+
+
+/* Подписываясь на рассылку, Вы соглашаетесь */
+
+position: absolute;
+width: 236.25px;
+height: 15px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* or 117% */
+display: flex;
+align-items: center;
+
+color: #8C8C8C;
+
+
+
+/* div */
+
+position: absolute;
+width: 280px;
+height: 28px;
+left: 0px;
+top: 14px;
+
+
+
+/* c условиями политики конфиденциальности и */
+
+position: absolute;
+width: 242.06px;
+height: 15px;
+left: 0px;
+top: -1px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* or 117% */
+display: flex;
+align-items: center;
+
+color: #8C8C8C;
+
+
+
+/* политики обработки персональных данных */
+
+position: absolute;
+width: 228.54px;
+height: 15px;
+left: 0px;
+top: 13px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* or 117% */
+display: flex;
+align-items: center;
+
+color: #0D61AF;
+
+
+
+/* © 2002–2023 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество. */
+
+position: absolute;
+width: 1149.62px;
+height: 18px;
+left: 0px;
+top: 575.48px;
+
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* or 143% */
+display: flex;
+align-items: center;
+
+color: #999999;
+
+
+
+/* div.chat-btn_7ku6q */
+
+position: absolute;
+width: 60px;
+height: 60px;
+left: 1836px;
+top: 996px;
+
+background: #FC8507;
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+border-radius: 60px;
+
+
+/* svg.chat-btn__image_HsJxT */
+
+position: absolute;
+width: 21px;
+height: 20px;
+left: 20px;
+top: 20px;
+
+
+
+/* Frame */
+
+position: absolute;
+width: 21px;
+height: 20px;
+left: calc(50% - 21px/2);
+top: 0px;
+
+
+
+/* Desktop */
+
+position: absolute;
+left: -7.14%;
+right: -7.14%;
+top: -10%;
+bottom: -10%;
+
+
+
+/* Desktop-1 */
+
+position: absolute;
+left: -7.14%;
+right: -7.14%;
+top: -10%;
+bottom: -10%;
+
+
+
+/* Group */
+
+position: absolute;
+left: -7.14%;
+right: -7.14%;
+top: -10%;
+bottom: -10%;
+
+
+
+/* baseline-chat_bubble-24px-(1) */
+
+position: absolute;
+left: -7.14%;
+right: -7.14%;
+top: -10%;
+bottom: -10%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 2.38%;
+right: 2.38%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+
+
+/* Path */
+
+position: absolute;
+left: -7.14%;
+right: -7.14%;
+top: -10%;
+bottom: -10%;
+

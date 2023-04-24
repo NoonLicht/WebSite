@@ -4,9 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Каталог</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            <!-- background: linear-gradient(90deg, rgb(180, 180, 180) 0%, rgba(255, 255, 255, 0.753) 50%); -->
+        }
+        input[type="search"] {
+            display: flex;
+            max-width: 0px 500px;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            padding: 5px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            margin-top: 60px;
+        }
+        .navigator {
+            display: flex;;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+            width: auto;
+            gap: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 1000;
+            list-style: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.4s all ease;
+        }
+        .navigator * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+        .navigator a {
+            position: relative;
+            color: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+        }
+        .navigator a:hover,
+        .navigator .home a{
+            color: #000000;
+            transition: 0.4s all ease;
+        }
+        .navigator a:hover:before,
+        .navigator .home a:before,
+        .navigator a:hover:after,
+        .navigator .home a:after{
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+            opacity: 1;
+        }
+        .navigator a:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #fc302b;
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+        .navigator a:hover::after{
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="navigator">
+        <!-- <li>
+            <a href="logo"><img src="https://1000marche.net/wp-content/uploads/2021/10/AMD-Logo.png" width="100" height="60"></a>
+        </li>
+        <li>
+            <form id="search" action="{{ url_for('search') }}" method="POST">
+            <label for="name"></label>
+            <input type="search" name="name" id="name">
+            <button type="submit">Поиск</button>
+        </li>
+        <li><a href="personal_account.html">Личный кабинет</a></li>
+        <li><a href="basket">Корзина</a></li> -->
+    </div>
+    <div class="produc_page_leftbar">
+        <div class="search_categories">
+
+        </div>
+        <div class="left_filters">
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="subcategory">
+            <h1>Каталог товаров</h1>
+            <div class="subcategory_item-container">
+                <div class="subcategory_item">
+                    <!-- текст и картинка наушники -->
+                </div>
+                <div class="subcategory_item">
+                    <!-- текст и картинка мышки-->
+                </div>
+                <div class="subcategory_item">
+                    <!-- текст и картинка клавиатуры-->
+                </div>
+            </div>
+        </div>
+        <div class="popular-categories">
+            <div class="tns1">
+                <h1>Популярные категории</h1>
+                <div class="popular-categories_item-content">
+                    <div class="popular-categories_description">
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                    </div>
+                </div>
+                <div class="popular-categories_item-content">
+                    <div class="popular-categories_description">
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                    </div>
+                </div>
+                <div class="popular-categories_item-content">
+                    <div class="popular-categories_description">
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                    </div>
+                </div>
+                <div class="popular-categories_item-content">
+                    <div class="popular-categories_description">
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                        <a href="" class="popular-categories_child"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
