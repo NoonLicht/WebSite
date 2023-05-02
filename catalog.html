@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог</title>
     <style>
-        body{
-            display: flex;
-            align-items: center;
-            <!-- background: linear-gradient(90deg, rgb(180, 180, 180) 0%, rgba(255, 255, 255, 0.753) 50%); -->
-        }
+
         input[type="search"] {
             display: flex;
             max-width: 0px 500px;
@@ -22,8 +19,10 @@
             margin-bottom: 20px;
             margin-top: 60px;
         }
+
         .navigator {
-            display: flex;;
+            display: flex;
+            ;
             justify-content: center;
             align-items: center;
             height: 45px;
@@ -37,32 +36,37 @@
             cursor: pointer;
             transition: 0.4s all ease;
         }
+
         .navigator * {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             -webkit-transition: all 0.35s ease;
             transition: all 0.35s ease;
         }
+
         .navigator a {
             position: relative;
             color: rgba(0, 0, 0, 0.5);
             padding: 0.5rem 0.8rem;
             text-decoration: none;
         }
+
         .navigator a:hover,
-        .navigator .home a{
+        .navigator .home a {
             color: #000000;
             transition: 0.4s all ease;
         }
+
         .navigator a:hover:before,
         .navigator .home a:before,
         .navigator a:hover:after,
-        .navigator .home a:after{
+        .navigator .home a:after {
             -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
             opacity: 1;
         }
-        .navigator a:after{
+
+        .navigator a:after {
             content: '';
             position: absolute;
             width: 100%;
@@ -74,32 +78,152 @@
             transform-origin: bottom right;
             transition: transform 0.5s ease-out;
         }
-        .navigator a:hover::after{
+
+        .navigator a:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
         }
+        .header-desktop {
+            position: absolute;
+            width: 1920px;
+            height: 195px;
+            left: 0px;
+            top: 0px;
+        }
+        .header-top{
+            position: absolute;
+            height: 49px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            background: #ffffff;
+        }
+        .header-top-menu_common-link{
+            position: absolute;
+            width: 60px;
+            height: 20px;
+            left: 300px;
+            top: 0px;
+        }
+        .product_page_leftbar{
+            display: flex;
+            
+        }
+        base-header{
+            display: grid;
+            place-items: center;
+
+        }
+        footer{
+            position:absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            text-align: left;
+        }
+        .navmenu_submenu{
+            float: left;
+            width: 33,33%;
+        }
+        .navmenu_group{
+            float: left;
+            width: 33,33%;
+        }
+        .navmenu_title{
+            float: left;
+            width: 33,33%;
+        }
+        .menu-contacts_phone-and-worktime{
+            text-align: center;
+        }
+        .menu-contacts_title{
+            text-align: center;
+        }
+        .subcategory{
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            text-align: left;
+        }
+        .popular-categories{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            text-align: left;
+        }
     </style>
 </head>
-<body>
-    <div class="navigator">
-        <!-- <li>
-            <a href="logo"><img src="https://1000marche.net/wp-content/uploads/2021/10/AMD-Logo.png" width="100" height="60"></a>
-        </li>
-        <li>
-            <form id="search" action="{{ url_for('search') }}" method="POST">
-            <label for="name"></label>
-            <input type="search" name="name" id="name">
-            <button type="submit">Поиск</button>
-        </li>
-        <li><a href="personal_account.html">Личный кабинет</a></li>
-        <li><a href="basket">Корзина</a></li> -->
-    </div>
-    <div class="produc_page_leftbar">
-        <div class="search_categories">
 
+<body>
+    <div class="product_page_leftbar">
+        <div class="search_categories">
         </div>
         <div class="left_filters">
-
+        </div>
+    </div>
+    <div class="base-header">
+        <div class="header-desktop">
+            <nav class="header-search">
+                <div class="header-bottom_container">
+                    <div class="header-bottom_nav_wrapper">
+                        <div class="buttons">
+                            <a href="" class="comapre-link-counter">
+                                <!-- Тут svg файл с картинкой -->
+                            </a>
+                            <a href="" class="wishlist-link-counter">
+                                <!-- Тут svg файл с картинкой -->
+                            </a>
+                            <a href="" class="buttons_link">
+                                <!-- Тут svg файл с картинкой -->
+                            </a>
+                        </div>
+                        <div class="user-menu">
+                            <div class="user-notifications_counter">
+                                <!-- Text -->
+                            </div>
+                            <div class="user-profile">
+                                <!-- svg file icon and text "Profile"-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="presearch_wrapper">
+                        <!-- svg file -->
+                        <input type="Поиск" class="presearch_input">
+                    </div>
+                    <div class="header-bottom_wrapper-logo">
+                        <div class="header-logo">
+                            <img src="" alt="">
+                            <!-- logo site -->
+                        </div>
+                        <span class="header-bottom_catalog-spoiler">
+                            Каталог
+                            <svg class="header-bottom_arrow-svg">
+                                <!-- тут svg файл -->
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-top">
+                <li class="header-top-menu_info">
+                    8 (800) 555-3535<br>8:30-20:00
+                </li>
+                <ul class="header-top-menu_common-item">
+                    Club<br>Юр. лицам
+                    <li class="header-top-menu_common-item">
+                        Покупателям<br>
+                        <svg class="header-top-menu_common-item">
+                            <!-- svg file -->
+                        </svg>
+                    </li>
+                    Магазин
+                    <a href="" class="header-top-menu_common-link">
+                        <svg class="header-top-menu_dot-svg">
+                            <!-- svg file -->
+                        </svg>
+                    </a>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -155,5 +279,87 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="footer_container">
+            <div class="footer_main">
+                <div class="menu-links-desktop_wrapper">
+                    <div class="navmenu_group">
+                        <h6 class="navmenu_title">
+                        </h6>
+                        <ul class="navmenu_submenu">
+                            О компании<br>
+                            Новости<br>
+                            Партнерам<br>
+                            Вакансии<br>
+                            Политика конфиденциальности<br>
+                            Персональные данные<br>
+                            Правила продаж<br>
+                            Правила пользования сайта<br>
+                            Сервисные центры<br>
+                        </ul>
+                    </div>
+                    <div class="navmenu_group">
+                        <ul class="navmenu_submenu">
+                            Обратная связь<br>
+                            Помощь<br>
+                            Бонусная программа<br>
+                            Подарочные карты<br>
+                            Корпоративные отделы<br>
+                            Проверка счета<br>
+                            Юридическим лицам<br>
+                            Проверка статуса ремонта<br>
+                            Обмен, возврат, гарантия<br>
+                            Статус заказа<br>
+                            Доставка<br>
+                            Кредиты<br>
+                            Способы оплаты<br>
+                            Как оформить заказ<br>
+                        </ul>
+                        <h6 class="navmenu_title">
+                        </h6>
+                    </div>
+                </div>
+                <div class="menu-contacts">
+                    <div class="menu-contacts_subscription">
+                        <div class="subscription_policy">
+                            Покупателям
+                            <div>C условиями политики конфиденциальности и политики обработки персональных
+                                данных<br>Подписываясь на рассылку, Вы соглашаетесь</div>
+                        </div>
+                        <div class="subscription_submit-icon">
+                            <span class="subscription_submit-icon">Enter</span>
+                            <input type="text" class="subscription_input" placeholder="Введите email и подпишитесь">
+                        </div>
+                    </div>
+                    <svg>
+                        <!-- svg file -->
+                    </svg>
+                    <div class="menu-contacts_social">
+                        <svg>
+                            <!-- svg file -->
+                        </svg>
+                        <svg>
+                            <!-- svg file -->
+                        </svg>
+                    </div>
+                    <p class="menu-contacts_phone-and-worktime">
+                        8 (800) 555-3535<br>8:30-20:00
+                    </p>
+                    <h6 class="menu-contacts_title">
+                        Оставайтесь на связи
+                    </h6>
+                </div>
+            </div>
+            <div class="footer_sites">
+                <div class="footer_sites-left">
+                    <svg></svg>
+                    <svg></svg>
+                    <svg></svg>
+                </div>
+                <svg></svg>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

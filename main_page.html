@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="div.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    :root {
+    --debug: 0;
+    
+    --context-bg: hsl(0deg 0% 99%);
+    --bg-container: hsl(0deg 0% 96%);
+    --bg-button: hsl(179deg 7% 97%);
+    --color-button: hsl(359deg 1% 35%);
+    
+    --button-shadow-opacity: 0;
+    --button-shadow-spread: 0;
+    --button-bg-opacity: 0;
+    --button-after-opacity: 0;
+    --btn-border-color: transparent;
+    --btn-border-size: 0;
+    --btn-inner-shadow: 1;
+    
+    --container-border-color: rgb(0 0 0 / 8%);
+    --container-box-shadow-color: rgb(0 0 0 / 12%);
+    
+    --timing: .3s;
+    --transitions: 
+        --coord-y .075s linear,
+        --coord-x .075s linear, 
+        --button-shadow-opacity var(--timing) ease,
+        --button-shadow-spread var(--timing) ease,
+        --button-bg-opacity var(--timing) ease,
+        --button-after-opacity var(--timing) ease,
+        opacity var(--timing) ease, 
+        box-shadow var(--timing) ease, 
+        background-image var(--timing) ease;
+    }
+    html,
+    body,
+    main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    body {
+    background: var(--context-bg);
+    font-family: "Inter", sans-serif;
+    }
+    main {
+    --col: 2;
+    --row: 1;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(var(--col), 1fr);
+    grid-template-rows: repeat(var(--row), 1fr);
+    }
+    .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--context-bg);
+    transform: scale(1);
+    }
+    .container > div {
+    background: var(--bg-container);
+    padding: 2em;
+    border: 1px solid var(--container-border-color);
+    border-radius: 0.9em;
+    box-shadow: 0 6px 12px -6px var(--container-box-shadow-color);
+    display: flex;
+    grid-gap: 16px;
+    }
+    h1{
+        align-items: center;
+        top: 0;
+        
+    }
+</style>
+<body>
+    <main>
+        <div class="container">
+            <div>
+                <h1>Загрузка данных МО в БД</h1>
+                <h3>Загрузка набора данных в систему</h3>
+                <form action="/file-loader/get-file-name" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <h3 class="text-style">Выберите файл для загрузки в базу данных</h3>
+                        <div class="input-file">
+                            <label class="input-file">
+                                <input type="file" name="file">
+                                <span class="input-file-btn">Выберите файл</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="text-style"">Выберите базу данных</h3>
+                                                                                    <select name=" databases">
+                            <option value="">Выбрать</option>
+                            {% for item in arr %}
+                            <option value="{{item}}">{{item}}</option>
+                            {% endfor %}
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="text-style">Задайте тип метода обучения</h3>
+                        <select name="type_method_training">
+                            <option value="">Выбрать</option>
+                            {% for item in tmt_arr %}
+                            <option value="{{item}}">{{item}}</option>
+                            {% endfor %}
+                        </select>
+                    </div><br>
+                    <input class="c-button" type="submit" value="Загрузить">
+                    <ul>
+                        <li><a href="/" class="back-menu-link">Вернуться в меню</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <h1>Работа с моделью</h1>
+                <ul>
+                    <li><a href="/load-model/download-model">Скачать модель</a></li>
+                    <li><a href="/load_model/upload-model">Загрузить модель</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
