@@ -1,5 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const products = document.querySelectorAll(".product");
+        const container = document.querySelector(".container");
+        const nav = document.querySelector(".nav");
+        const cover = document.querySelector(".cover");
+        const overlay = document.querySelector(".product__overlay");
+        const productWidth = 310;
+        function getProductOffset() {
+            return (container.offsetWidth - (container.offsetWidth * 70) / 100) / 2;
+        }
+        function removeActiveClass() {
+            const activeProduct = document.querySelector(".product--active");
+            if (activeProduct) {
+                activeProduct.scrollTop = 0;
+                activeProduct.classList.remove("product--active");
+                container.classList.remove("container--detail");
+            }
+        }
+        products.forEach((product) => {
+            product.addEventListener("click", (e) => {
+                if (e.target.classList.contains("product__close")) {
+                    overlay.style.display = "none";
+                    removeActiveClass();
+                    return;
+                }
+                if (!e.currentTarget.classList.contains("product--active")) {
+                    overlay.style.display = "block";
+                    removeActiveClass();
+                    e.currentTarget.classList.add("product--active");
+                    container.classList.add("container--detail");
+                    product__subtitle.add('product__subtitle--expanded');
+                    product__img.add('.product--active');
+                    const index = parseInt(e.currentTarget.getAttribute("data-index"));
+                    const left = productWidth * index + cover.offsetWidth + index * 6 + nav.offsetWidth - getProductOffset();
+                    container.scrollLeft = left;
+                    overlay.style.display = "none";
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                        e.currentTarget.scrollIntoView({ inline: "start" });
+                    }
+                }
+            });
+        });
+    });
+</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,97 +52,495 @@
     <title>Shop</title>
 </head>
 <style>
-    html{
+    html {
         scroll-behavior: smooth;
+        overflow: scroll;
+        overflow-x: hidden;
     }
-    body{
+    body {
         display: grid;
     }
+
+/*Стиль для навбара*/
     .ul_nav {
-            display:inline-flex;
-            flex-direction: row;
-            position: fixed;
-            justify-content: center;
-            align-items: center;
-            height: 45px;
-            width: 100%;
-            gap: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 1000;
-            list-style: none;
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.4s all ease;
-            background: transparent;
-            backdrop-filter: blur(10px);
-            
-        }
-        .ul_nav * {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-transition: all 0.35s ease;
-            transition: all 0.35s ease;
-        }
-        .ul_nav a {
-            position: relative;
-            color: rgba(0, 0, 0, 0.5);
-            padding: 0.5rem 0.8rem;
-            text-decoration: none;
-        }
-        .ul_nav a:hover,
-        .ul_nav .home a{
-            color: #000000;
-            transition: 0.4s all ease;
-        }
-        .ul_nav a:hover:before,
-        .ul_nav .home a:before,
-        .ul_nav a:hover:after,
-        .ul_nav .home a:after{
-            -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-            opacity: 1;
-        }
-        .ul_nav a:after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #fc302b;
-            transform-origin: bottom right;
-            transition: transform 0.5s ease-out;
-        }
-        .ul_nav a:hover::after{
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-    .section1{
-        background: #fff111;
+        display: inline-flex;
+        flex-direction: row;
+        position: fixed;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100px;
         width: 100%;
-        height: 900px;
+        gap: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 1000;
+        list-style: none;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.4s all ease;
+        background: transparent;
+        backdrop-filter: blur(5px); 
+        padding-right: 100px;
+    }
+    .ul_nav * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }
+    .ul_nav a {
+        position: relative;
+        color: rgba(0, 0, 0, 0.5);
+        padding: 0.5rem 0.8rem;
+        text-decoration: none;
+    }
+    .ul_nav a:hover,
+    .ul_nav .home a {
+        color: #000000;
+        transition: 0.4s all ease;
+    }
+    .ul_nav a:hover:before,
+    .ul_nav .home a:before,
+    .ul_nav a:hover:after,
+    .ul_nav .home a:after {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    .section1 {
+        width: 100%;
+        height: 1000px;
         margin-top: 50px;
     }
-    .section2{
+    .section2 {
         background: #fb5e5e;
         width: 100%;
-        height: 900px;
+        height: 1000px;
     }
-</style>
-<script>
+    ::-webkit-scrollbar{
+        width: 0px;
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb{
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+    *{
+        box-sizing: border-box;
+        outline: none;
+    }
+    
 
-</script>
+/*Анимация фото товара*/
+    .con{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px 400px;
+    }
+    .con img{
+        width: 25rem;
+        transform: translateY(0px);
+        animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float{
+        0% {
+            transform: translateY(0px)
+        }
+        50% {
+            transform: translateY(-50px)
+        }
+        100% {
+            transform: translateY(0px)
+        }
+    }
+
+
+/*Стили для фото профиля*/
+.wrapper{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
+.wrapper img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.wrapper img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.3);
+}
+
+</style>
 <body>
     <div class="ul_nav">
-        <li><a href="login.html">Log in</a></li>
-        <li><a href="catalog.html">Catalog</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="catalog.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+            <path fill="#000" fill-rule="evenodd"
+                d="M16 16h4v4h-4v-4Zm-6 0h4v4h-4v-4Zm-6 0h4v4H4v-4Zm12-6h4v4h-4v-4Zm-6 0h4v4h-4v-4Zm-6 
+                0h4v4H4v-4Zm12-6h4v4h-4V4Zm-6 0h4v4h-4V4ZM4 4h4v4H4V4Z" />
+        </svg></a></li>
+        <li><a href="blog.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+            <path fill="#000" fill-rule="nonzero"
+                d="M5 21v-4.157c-1.25-1.46-2-3.319-2-5.343C3 6.806 7.03 3 12 3s9 3.806 9 8.5-4.03 8.5-9 
+                8.5a9.352 9.352 0 0 1-4.732-1.268L5 21Zm7-3c3.866 0 7-2.91 7-6.5S15.866 5 12 5s-7 2.91-7 
+                6.5S8.134 18 12 18Z" />
+        </svg></a></li>
+        <li><a href="faq.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+            <path fill="#000" fill-rule="evenodd"
+                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10Zm0-2a8 8 0 1 0 0-16 8 
+                8 0 0 0 0 16Zm-1-4h2v2h-2v-2Zm0-1.992s2-.008 2 0C13 13.006 16 12 16 10c0-2.21-1.773-4-3.991-4A4 4 0
+                 0 0 8 10h2c0-1.1.9-2 2-2s2 .9 2 2c0 .9-3 2.367-3 4.008Z" />
+        </svg></a></li>
+        <li><a href="basket.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+            <path fill="#000" fill-rule="evenodd"
+                d="M8 16h8a1 1 0 0 1 0 2H7a1 1 0 0 1-1-1V4H5a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1v2.001L8.073 
+                5h9.854C19.072 5 20 5.895 20 7c0 .146-.017.291-.05.434l-1.151 5c-.21.915-1.052 1.566-2.024 
+                1.566H8.073L8 13.999V16Zm-.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm9 0a1.5 1.5 0 1 1 0-3 1.5 
+                1.5 0 0 1 0 3ZM8 7v5h8.831L18 7H8Z" />
+        </svg></a></li>
+        <li><a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+            <path fill="#000" fill-rule="nonzero"
+                d="M12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0 3c3.186 0 6.045.571 8 3.063V20H4v-1.937C5.955 15.57 8.814 15 12 15Z" />
+        </svg></a></li>
+        <li><a href="personal_account.html">
+            <div class="wrapper">
+                <img src="img.jpeg">
+            </div>
+        </a></li>
     </div>
     <div class="section1">
+        <div class="container">
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW!</div>
+                <div class="con">
+                    <img src="" class="product-img" />
+                </div>                
+                <div class="product__brand">Какой-то бренд</div>
+                <div class="product__title">Какое-то название</div>
+                <div class="product__price">Какая-то цена</div>
+                <div class="product__buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle"></div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s">Описание 2</div>
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Тут характеристики по разделам</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Клавиатура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                    </div>
+                    <div class="product__detail">Подробнее</div>
+                    <div class="product__overlay"></div>
+                </div>
+            </div>
+            <div class="product" data-index="1">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW!</div>
+                <img src="" class="product-img" />
+                <div class="product__brand">Какой-то бренд</div>
+                <div class="product__title">Какое-то название</div>
+                <div class="product__price">Какая-то цена</div>
+                <div class="product__buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle"></div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s">Описание 2</div>
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Тут характеристики по разделам</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Клавиатура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                    </div>
+                    <div class="product__detail">Подробнее</div>
+                    <div class="product__overlay"></div>
+                </div>
+            </div>
+            <div class="product" data-index="2">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW!</div>
+                <img src="" class="product-img" />
+                <div class="product__brand">Какой-то бренд</div>
+                <div class="product__title">Какое-то название</div>
+                <div class="product__price">Какая-то цена</div>
+                <div class="product__buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle"></div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s">Описание 2</div>
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Тут характеристики по разделам</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Клавиатура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                    </div>
+                    <div class="product__detail">Подробнее</div>
+                    <div class="product__overlay"></div>
+                </div>
+            </div>
+            <div class="product" data-index="3">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW!</div>
+                <img src="" class="product-img" />
+                <div class="product__brand">Какой-то бренд</div>
+                <div class="product__title">Какое-то название</div>
+                <div class="product__price">Какая-то цена</div>
+                <div class="product__buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle"></div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s">Описание 2</div>
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Тут характеристики по разделам</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Клавиатура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                    </div>
+                    <div class="product__detail">Подробнее</div>
+                    <div class="product__overlay"></div>
+                </div>
+            </div>
+            <div class="product" data-index="4">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW!</div>
+                <img src="" class="product-img" />
+                <div class="product__brand">Какой-то бренд</div>
+                <div class="product__title">Какое-то название</div>
+                <div class="product__price">Какая-то цена</div>
+                <div class="product__buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle"></div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s">Описание 2</div>
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Тут характеристики по разделам</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Клавиатура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                    </div>
+                    <div class="product__detail">Подробнее</div>
+                    <div class="product__overlay"></div>
+                </div>
+            </div>
+            <div class="product" data-index="5">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW!</div>
+                <img src="" class="product-img" />
+                <div class="product__brand">Какой-то бренд</div>
+                <div class="product__title">Какое-то название</div>
+                <div class="product__price">Какая-то цена</div>
+                <div class="product__buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle"></div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s">Описание 2</div>
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Тут характеристики по разделам</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Клавиатура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                    </div>
+                    <div class="product__detail">Подробнее</div>
+                    <div class="product__overlay"></div>
+                </div>
+            </div>
+            <div class="product" data-index="6">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW!</div>
+                <img src="" class="product-img" />
+                <div class="product__brand">Какой-то бренд</div>
+                <div class="product__title">Какое-то название</div>
+                <div class="product__price">Какая-то цена</div>
+                <div class="product__buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle"></div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Описание 1</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s">Описание 2</div>
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Тут характеристики по разделам</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Клавиатура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell"></div>
+                        <div class="product__table-cell"></div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                    </div>
+                    <div class="product__detail">Подробнее</div>
+                    <div class="product__overlay"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="section2">
+
     </div>
 </body>
+
 </html>

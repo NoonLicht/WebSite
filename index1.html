@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const products = document.querySelectorAll(".product");
+        const container = document.querySelector(".container");
+        const nav = document.querySelector(".nav");
+        const cover = document.querySelector(".cover");
+        const overlay = document.querySelector(".product__overlay");
+        const productWidth = 310;
+        function getProductOffset() {
+            return (container.offsetWidth - (container.offsetWidth * 70) / 100) / 2;
+        }
+        function removeActiveClass() {
+            const activeProduct = document.querySelector(".product--active");
+            if (activeProduct) {
+                activeProduct.scrollTop = 0;
+                activeProduct.classList.remove("product--active");
+                container.classList.remove("container--detail");
+            }
+        }
+        products.forEach((product) => {
+            product.addEventListener("click", (e) => {
+                if (e.target.classList.contains("product__close")) {
+                    overlay.style.display = "none";
+                    removeActiveClass();
+                    return;
+                }
+                if (!e.currentTarget.classList.contains("product--active")) {
+                    overlay.style.display = "block";
+                    removeActiveClass();
+                    e.currentTarget.classList.add("product--active");
+                    container.classList.add("container--detail");
+                    product__subtitle.add('product__subtitle--expanded');
+                    product__img.add('.product--active');
+                    const index = parseInt(e.currentTarget.getAttribute("data-index"));
+                    const left = productWidth * index + cover.offsetWidth + index * 6 + nav.offsetWidth - getProductOffset();
+                    container.scrollLeft = left;
+                    overlay.style.display = "none";
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                        e.currentTarget.scrollIntoView({ inline: "start" });
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        form1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 5px;
+            position: relative;
+            background: #FFFFFF;
+            max-width: auto;
+            max-height: auto;
+            padding: 5px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        #section-1 {
+            background: #FFF;
+            width: auto;
+            height: auto;
+        }
+
+        #section-2 {
+            background: #FFF;
+            width: auto;
+            height: auto;
+        }
+
+        #section-3 {
+            background: #FFF;
+            width: auto;
+            height: auto;
+            padding-bottom: 10px;
+        }
+
+        .navbar a {
+            font-size: 2rem;
+            margin-left: 2rem;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        h1 {
+            position: relative;
+            top: 0px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .ul_nav {
+            display: flex;
+            ;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+            width: auto;
+            gap: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 1000;
+            list-style: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.4s all ease;
+        }
+
+        .ul_nav * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+
+        .ul_nav a {
+            position: relative;
+            color: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+        }
+
+        .ul_nav a:hover,
+        .ul_nav .home a {
+            color: #000000;
+            transition: 0.4s all ease;
+        }
+
+        .ul_nav a:hover:before,
+        .ul_nav .home a:before,
+        .ul_nav a:hover:after,
+        .ul_nav .home a:after {
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+            opacity: 1;
+        }
+
+        .ul_nav a:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #fc302b;
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+
+        .ul_nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        html {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            /* remove scrollbar space */
+            background: transparent;
+            /* optional: just make scrollbar invisible */
+        }
+
+        /* optional: show position indicator in red */
+        ::-webkit-scrollbar-thumb {
+            width: 0px;
+            height: 0px;
+            background: rgba(255, 255, 255, 0.5)
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+
+        :root {
+            --main-color: #fc302b;
+            --font: "Space Grotesk", sans-serif;
+            --border-color: #08090a;
+        }
+
+        * {
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        img {
+            max-width: 70%;
+        }
+
+        body {
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            color: #08090a;
+            display: grid;
+            place-items: center;
+
+            font-family: var(--font);
+            background: linear-gradient(90deg, rgb(180, 180, 180) 0%, rgba(255, 255, 255, 0.753) 50%);
+
+            padding: 0 80px;
+
+            @media (max-width: 1200px) {
+                padding: 0;
+            }
+        }
+
+        .container {
+            max-width: 1600px;
+            border-radius: 0px;
+            overflow-x: none;
+            overflow-y: hidden;
+            max-height: 800px;
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            scroll-behavior: smooth;
+            background-color: #ffffff;
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.4);
+
+            @media (max-width: 780px) {
+                max-height: none;
+                border-radius: 0;
+                height: 100%;
+            }
+        }
+
+        .nav {
+            width: 100px;
+            height: 100%;
+            background-color: #08090a;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+
+            @media (max-width: 768px) {
+                width: 60px;
+            }
+
+            @media (max-width: 768px) {
+
+                &__text {
+                    writing-mode: vertical-rl;
+                    transform: rotate(-180deg);
+
+                    @media (max-width: 800px) {
+                        display: none;
+                    }
+                }
+
+                &__shop {
+                    width: 24px;
+                }
+
+                &__cart {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    span {
+                        background-color: var(--main-color);
+                        border: 2px solid #08090a;
+                        height: 20px;
+                        display: flex;
+                        font-weight: 500;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        font-size: 12px;
+                        width: 20px;
+                        color: #fff;
+                        line-height: 1;
+                        right: -6px;
+                        top: -8px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+
+        .cover {
+            background-image: url("https://img2.rudalle.ru/images/d1/30/cf/d130cf92b9744ef58ba31445bf037214_00000.jpg");
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            font-size: 48px;
+            color: #fff;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: center;
+            background-position: center;
+            text-align: center;
+            font-weight: 500;
+            flex-shrink: 0;
+
+            @media (max-width: 768px) {
+                width: 300px;
+            }
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 36px;
+            background-color: #fff;
+            width: 400px;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            transition: 0.6s;
+            flex-shrink: 0;
+        }
+
+        .product+.product {
+            margin-left: 6px;
+        }
+
+        .product__img {
+            width: 100%;
+            object-fit: contain;
+            margin: 40px 0;
+            max-width: 300px;
+            transition: 0.3s;
+        }
+
+        .product__title {
+            max-width: 12ch;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            margin: 20px 0;
+            transition: 0.6s;
+        }
+
+        .product__brand {
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.6s;
+        }
+
+        .product__price {
+            margin-bottom: 30px;
+            transition: 0.6s;
+        }
+
+        .product__subtitle {
+            color: #414041;
+            line-height: 1.5em;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .product__subtitle--expanded {
+            display: none;
+        }
+
+        .product__detail {
+            margin-top: auto;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .product__detail-img {
+            display: none;
+        }
+
+        .product__buttons {
+            align-items: center;
+            display: none;
+            min-width: 80%;
+            margin-bottom: 36px;
+        }
+
+        @media (max-width: 1000px) {
+            .product__buttons {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .product__option--active.product__add {
+                margin-left: 0;
+                margin-top: 16px;
+            }
+        }
+
+        .product__options {
+            display: flex;
+            align-items: center;
+        }
+
+        .product__option {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-family: var(--font);
+            margin-right: -1px;
+        }
+
+        @media (max-width: 650px) {
+            .product__option {
+                padding: 8px 16px;
+            }
+        }
+
+        .product__option:first-child {
+            border-radius: 4px 0 0 4px;
+        }
+
+        .product__option:last-child {
+            border-radius: 0 4px 4px 0;
+        }
+
+        .product__option--active {
+            background-color: var(--border-color);
+            color: #fff;
+            border-color: var(--border-color);
+        }
+
+        .product__add.product__option {
+            background-color: var(--main-color);
+            color: #fff;
+            margin-left: 16px;
+            flex-grow: 1;
+            border-radius: 4px;
+            border-color: var(--main-color);
+        }
+
+        .product--active {
+            width: 60%;
+            padding-left: 70px;
+            padding-right: 70px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding-bottom: 0;
+        }
+
+        @media (max-width: 650px) {
+            .product--active {
+                width: 100%;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        .product--active .product__title {
+            font-size: 44px;
+            max-width: none;
+        }
+
+        @media (max-width: 650px) {
+            .product--active .product__title {
+                font-size: 28px;
+            }
+        }
+
+        .product--active .product__detail {
+            display: none;
+        }
+
+        .product--active .product__price {
+            font-size: 24px;
+        }
+
+        .product--active .product__brand {
+            font-size: 16px;
+        }
+
+        .product--active .product__subtitle {
+            display: none;
+        }
+
+        .product--active .product__detail-img {
+            display: block;
+            margin-top: 20px;
+            margin: 20px -70px 0;
+            max-width: none;
+            width: calc(100% + 140px);
+        }
+
+        @media (max-width: 650px) {
+            .product--active .product__detail-img {
+                width: calc(100% + 60px);
+            }
+        }
+
+        .product--active .product__subtitle--expanded {
+            display: block;
+            animation-name: transform;
+            animation-duration: 0.6s;
+            animation-delay: var(--delay);
+            animation-fill-mode: both;
+        }
+
+        .product--active .product__buttons {
+            display: flex;
+            animation-name: transform;
+            animation-duration: 0.6s;
+            animation-delay: var(--delay);
+            animation-fill-mode: both;
+        }
+
+        .product--active .product__table,
+        .product--active .product__grid,
+        .product--active .product__close {
+            display: flex;
+        }
+
+        .product__table {
+            background-color: #08090a;
+            color: #fff;
+            margin: 0 -70px;
+            padding: 70px 100px;
+            width: calc(100% + 140px);
+            flex-direction: column;
+            display: none;
+        }
+
+        @media (max-width: 650px) {
+            .product__table {
+                width: calc(100% + 60px);
+                padding: 50px 30px;
+            }
+        }
+
+        .product__table-title {
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .product__table-row {
+            display: flex;
+            padding-top: 12px;
+            margin-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 650px) {
+            .product__table-row {
+                flex-direction: column;
+            }
+        }
+
+        .product__table-cell {
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .product__table-cell:first-child {
+            flex-shrink: 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            width: 260px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media (max-width: 650px) {
+            .product__table-cell:first-child {
+                width: auto;
+                margin-bottom: 2px;
+            }
+        }
+
+        .product__option {
+            border-color: #323132;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 30px;
+            background-color: #323132;
+        }
+
+        @keyframes transform {
+            0% {
+                opacity: 0;
+                transform: translatey(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .product__grid {
+            display: flex;
+            margin: 0 -70px;
+            width: calc(100% + 140px);
+            flex-wrap: wrap;
+            display: none;
+        }
+
+        @media (max-width: 650px) {
+            .product__grid {
+                width: calc(100% + 60px);
+            }
+        }
+
+        .product__grid img {
+            width: 33.333%;
+            max-height: 320px;
+            object-fit: cover;
+        }
+
+        .product__grid img:nth-child(3)~img {
+            width: 50%;
+            max-height: none;
+        }
+
+        .product__close {
+            position: sticky;
+            display: none;
+            z-index: 1;
+            top: 0;
+            margin-right: -40px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            margin-left: auto;
+            color: transparent;
+            flex-shrink: 0;
+            overflow: hidden;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' stroke='%23fff' stroke-width='2' fill='%23fff' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            white-space: nowrap;
+            border: 0;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 650px) {
+            .product__close {
+                margin-top: -26px;
+                margin-right: 0;
+            }
+        }
+
+        .product__overlay {
+            width: 80%;
+            display: none;
+            overflow: hidden;
+            height: 40px;
+            background-color: red;
+            flex-shrink: 0;
+        }
+
+        .container--detail .product:not(.product--active) {
+            opacity: 0.3;
+        }
+
+        .container--detail .product:not(.product--active):hover {
+            opacity: 0.7;
+        }
+
+        .container:not(.container--detail) .product:hover {
+            box-shadow: 0 4px 0 0 var(--main-color) inset;
+        }
+
+        .container:not(.container--detail) .product:hover .product__img {
+            transform: scale(1.07);
+        }
+
+        input {
+            width: auto;
+            height: 25px;
+            border-radius: 5px;
+            padding: none;
+            font-size: large;
+            position: absolute;
+            top: 70px;
+            left: 30px;
+        }
+
+        input[type="text"] {
+            width: auto;
+            height: 25px;
+            border-radius: 5px;
+            padding: none;
+            font-size: large;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1></h1>
+    <form>
+
+        <div class="ul_nav">
+            <li><a href="login.html">Авторизация</a>
+            <li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="order">Заказ</a></li>
+            <li><a href="shop">Магазины</a></li>
+        </div>
+    </form>
+    <h1></h1>
+    <section id="section-1">
+        <div class="container">
+            <div class="cover"></div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st1/fit/500/500/3fb8cb8e3443f4409ebfb4357cbe20df/59fa2590bfc7aba209dbed743db0e16315190f6a534162529d0e404dc4be7425.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">HyperX</div>
+                <div class="product__title">HyperX Cloud Orbit S 2022</div>
+                <div class="product__price">27,999 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Радиочастотная гарнитура HyperX Cloud Orbit S 2022 HX-HSCOS-GM
+                    обеспечивают трехмерное звучание и позволяют полностью
+                    погрузиться в услышанное. Модель совместима с большинством устройств, в том числе приставками,
+                    компьютерами,
+                    смартфонами. Специальная технология отслеживает положение головы в реальном режиме, что обеспечивает
+                    более точное
+                    позиционирование в игре.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose QuietComfort
+                    45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной
+                    техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать
+                    технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с
+                    охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта. Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления. Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный
+                    эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье</div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st1/fit/500/500/8f1962e03fc23979d6acecf22a491240/ce5342b0071779ed5d64fd123405fc1bc62155efd67220eb79ba6099a2ef73b9.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">Sennheiser</div>
+                <div class="product__title">Sennheiser HD 660 S</div>
+                <div class="product__price">40,499 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Проводные наушники Sennheiser HD 660 S, представленные в черном цвете,
+                    характеризуются высочайшим качеством звука и
+                    функциональной конструкцией. Мягкое оголовье наушников позволяет находиться в них очень долго и при
+                    этом не испытывать
+                    дискомфорта.Овальные амбушюры из микрофибры плотно и мягко прилегают к ушам, не пропуская
+                    посторонние звуки. Открытое акустическое
+                    оформление предполагает максимально естественное звучание.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose QuietComfort
+                    45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной
+                    техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать
+                    технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с
+                    охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта. Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления. Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный
+                    эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье
+                        </div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st4/fit/500/500/4025774270e5c1fab1f6c4363bc2d6e0/3a59d34d298caec7b0edc10066dacf9ccf8c11600c8ab1a711b8012c517f19e3.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">Sennheiser</div>
+                <div class="product__title">Sennheiser MOMENTUM4</div>
+                <div class="product__price">35,999 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Bluetooth-гарнитура Sennheiser MOMENTUM 4 с динамическими драйверами 42
+                    мм воспроизводит чистый и насыщенный звук в
+                    широком частотном диапазоне до 22000 Гц. Двойной микрофон с шумоподавлением с четкостью передает
+                    голос. Модель
+                    предусматривает беспроводное подключение по Bluetooth и возможность проводной синхронизации по
+                    аудиокабелю 3.5 мм – это
+                    гарантирует широкую совместимость с устройствами.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose QuietComfort
+                    45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной
+                    техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать
+                    технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с
+                    охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта. Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления. Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный
+                    эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье
+                        </div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st1/fit/500/500/e08f7ae881bda7a63dddf22645a49c07/fd240e8aa182a8d177c82214cb940407fed7c860e2718eb73858076d2a15ad8a.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">Sony</div>
+                <div class="product__title">Sony WH-1000XM5</div>
+                <div class="product__price">29,999 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Bluetooth-гарнитура Sony WH-1000XM5, имеющая элегантную серо-серебристую
+                    расцветку корпуса, станет надежным спутником
+                    любого меломана, мечтающего насладиться насыщенным и сбалансированным звучанием любимых музыкальных
+                    композиций. Модель
+                    получила в свое оснащение большие охватывающие амбушюры, которые вместе с регулируемым оголовьем
+                    обеспечивают комфортную
+                    посадку с возможностью многочасового прослушивания музыки.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose QuietComfort
+                    45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной
+                    техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать
+                    технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с
+                    охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта. Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления. Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный
+                    эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье</div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st4/fit/500/500/e2c2a8e2b9bad57e274829e8cf1257a7/1914aa537ae1cef60af039484543bfd1fccfeff59a34e63951ceb8b5c9895862.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">Sennheiser</div>
+                <div class="product__title">MOMENTUM Wireless</div>
+                <div class="product__price">36,799 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Bluetooth гарнитура Sennheiser MOMENTUM M3 AEBT XL с изысканной
+                    бело-коричневой расцветкой оснащена охватывающими
+                    амбушюрами с диаметром излучателей 42 мм для воспроизведения звука в расширенном диапазоне частот
+                    (6-23000 Гц). Одной из
+                    ключевых особенностей данной модели стала активная система шумоподавления, благодаря которой будут
+                    отсекаться до 95%
+                    посторонних звуков при прослушивании музыки. Комфортную посадку наушников на голове обеспечивают
+                    мягкие амбушюры.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose QuietComfort
+                    45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной
+                    техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать
+                    технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с
+                    охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта. Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления. Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный
+                    эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье
+                        </div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st1/fit/500/500/ed0de741be18644dc12b5a900dd937db/d21b4d453c863ad5551bc098557db7cd227ea05c41b9dd0e8f907f80ec362dfb.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">Bose</div>
+                <div class="product__title">Noise Cancelling 700</div>
+                <div class="product__price">30,999 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Bluetooth-гарнитура Bose Noise Cancelling Headphones 700 с накладными
+                    амбушюрами оформлена в сером корпусе и крепится на
+                    оголовье. Чаши прилегают плотно к ушам. Устройство не ощущаются на голове за счет легкого оголовья и
+                    правильному
+                    распределению веса на корпусе. Поворотные чаши обеспечивают удобное хранение устройства.
+                    Подключаются Bose Noise Cancelling Headphones 700 при помощи Bluetooth, что позволяет ощутить
+                    свободу действий в радиусе
+                    10 м.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose QuietComfort
+                    45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной
+                    техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать
+                    технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с
+                    охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта. Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления. Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный
+                    эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье
+                        </div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st1/fit/500/500/ea197316231f6f01af9faaaf54075a83/76b24bfb49dce93805f1d06592cca2d6d01a72e25ee52f4b05837ee87faa263a.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">Bose</div>
+                <div class="product__title">QuietComfort 45</div>
+                <div class="product__price">30,999 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Bluetooth-гарнитура Bose QuietComfort 45 представлена в черном корпусе и
+                    обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose QuietComfort 45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на
+                    регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта. Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления. Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье
+                        </div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="cover"></div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st1/fit/500/500/3fb8cb8e3443f4409ebfb4357cbe20df/59fa2590bfc7aba209dbed743db0e16315190f6a534162529d0e404dc4be7425.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">HyperX</div>
+                <div class="product__title">HyperX Cloud Orbit S 2022</div>
+                <div class="product__price">27,999 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Радиочастотная гарнитура HyperX Cloud Orbit S 2022 HX-HSCOS-GM
+                    обеспечивают
+                    трехмерное звучание и позволяют полностью
+                    погрузиться в услышанное. Модель совместима с большинством устройств, в том числе приставками,
+                    компьютерами,
+                    смартфонами. Специальная технология отслеживает положение головы в реальном режиме, что обеспечивает
+                    более
+                    точное
+                    позиционирование в игре.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose
+                    QuietComfort
+                    45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной
+                    техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать
+                    технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с
+                    охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта.
+                    Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления.
+                    Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими
+                    частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный
+                    эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье</div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука
+                        </div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+    </section>
+    <section id="section-3">
+        <div class="container">
+            <div class="cover"></div>
+            <div class="product" data-index="0">
+                <div class="product__close">Закрыть</div>
+                <div class="product__new">NEW</div>
+                <img src="https://c.dns-shop.ru/thumb/st1/fit/500/500/3fb8cb8e3443f4409ebfb4357cbe20df/59fa2590bfc7aba209dbed743db0e16315190f6a534162529d0e404dc4be7425.jpg.webp"
+                    class="product-img" />
+                <div class="product__brand">HyperX</div>
+                <div class="product__title">HyperX Cloud Orbit S 2022</div>
+                <div class="product__price">27,999 ₽</div>
+                <div class="product_buttons" style="--delay: 0.2s">
+                    <button class="product__option product__add">Добавить в корзину</button>
+                </div>
+                <br>
+                <div class="product__subtitle">Радиочастотная гарнитура HyperX Cloud Orbit S 2022 HX-HSCOS-GM
+                    обеспечивают
+                    трехмерное звучание и позволяют полностью
+                    погрузиться в услышанное. Модель совместима с большинством устройств, в том числе приставками,
+                    компьютерами,
+                    смартфонами. Специальная технология отслеживает положение головы в реальном режиме, что обеспечивает
+                    более
+                    точное
+                    позиционирование в игре.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">Bluetooth-гарнитура
+                    Bose
+                    QuietComfort
+                    45 представлена в черном корпусе и обладает складной конструкцией. Это позволяет
+                    удобно переносить наушники в компактном футляре, который защищает их от внешних воздействий. Связь с
+                    мобильной
+                    техникой
+                    и компьютерами обеспечивает канал Bluetooth 5.1. Для оперативной установки связи наушники могут
+                    использовать
+                    технологию
+                    NFC</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.4s">Наушники Bose
+                    QuietComfort 45 с
+                    охватывающими мягкими амбушюрами содержат поворотные чаши и фиксируются на регулируемое
+                    оголовье. Это позволяет настроить их так, чтобы вы могли находиться в них долго, не ощущая
+                    дискомфорта.
+                    Микрофон,
+                    зафиксированный в корпусе, позволяет передавать чистый и четкий голос благодаря системе
+                    шумоподавления.
+                    Режим «Talk
+                    through» поможет пользователю, не снимая наушников, слышать окружающие звуки.
+                    От аккумулятора устройство будет работать в течение 24 часов. Сбалансированный звук с чистыми
+                    высокими
+                    частотами и
+                    глубокими басами обеспечивает особая акустическая технология. Вы получаете качественный Hi-Fi-звук,
+                    активный
+                    эквалайзер,
+                    оптимизирующий громкость звучания.</div>
+                <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.5s"></div>
+                <img src="">
+                <div class="product__table">
+                    <div class="product__table-title">Характеристики</div>
+                    <div class="product__table-row">Общие параметры</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип</div>
+                        <div class="product__table-cell">Радиочастотная гарнитура</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Модель</div>
+                        <div class="product__table-cell">HyperX Cloud Orbit S 2022 HX-HSCOS-GM</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Код производителя</div>
+                        <div class="product__table-cell">[4P5M2AA]</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Игровые наушники</div>
+                        <div class="product__table-cell">Да</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Способ передачи сигнала</div>
+                        <div class="product__table-cell">Проводной, радиоканал</div>
+                    </div>
+                    <div class="product__table-row">Внешний вид и конструкция</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип конструкции</div>
+                        <div class="product__table-cell">Охватывающие</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Основной цвет наушников</div>
+                        <div class="product__table-cell">Черный</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Материал корпуса</div>
+                        <div class="product__table-cell">Пласти, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Матриал амбушюр</div>
+                        <div class="product__table-cell">Мягкая пена, экокожа</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Метод крепления</div>
+                        <div class="product__table-cell">Оголовье</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Подсветка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Складные</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности конструкции</div>
+                        <div class="product__table-cell">Мягкие амбушюры, мягкое оголовье, поворотные чаши, регулируемое
+                            оголовье</div>
+                    </div>
+                    <div class="product__table-row">Акустические характеристики</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Формат звуковой схемы</div>
+                        <div class="product__table-cell">7.1 Virtual</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Тип аккустического оформления</div>
+                        <div class="product__table-cell">Закрытые</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Диаметр мембраны излучателей</div>
+                        <div class="product__table-cell">100мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Минимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">10Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Максимальная воспроизводимая частота</div>
+                        <div class="product__table-cell">50000Гц</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Чувствительность</div>
+                        <div class="product__table-cell">120Дб</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Количество излучателей с каждой стороны</div>
+                        <div class="product__table-cell">1</div>
+                    </div>
+                    <div class="product__table-row">Характеристики микрофона</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Расположение микрофона</div>
+                        <div class="product__table-cell">На наушниках</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Съемный микрофон</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Крепление микрофона</div>
+                        <div class="product__table-cell">Подвижное</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции и особенности микрофона</div>
+                        <div class="product__table-cell">Ветрозащита микрофона, гибкий микрофон, шумоподавление
+                            микрофона</div>
+                    </div>
+                    <div class="product__table-row">Параметры подключения</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем для подключения к устройству</div>
+                        <div class="product__table-cell">USB, USB Type C, jack 3.5 мм</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Разъем зарядки</div>
+                        <div class="product__table-cell">USB Type C</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Отсоединяемый кабель</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина кабеля</div>
+                        <div class="product__table-cell">1.5м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Форма штекера кабель</div>
+                        <div class="product__table-cell">Прямой</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Дополнительный кабель в комплекте</div>
+                        <div class="product__table-cell">Аудиокабель jack 3.5 мм, кабель соединительный USB</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Длина дополнительного кабеля</div>
+                        <div class="product__table-cell">1.2 м, 3 м</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности кабеля</div>
+                        <div class="product__table-cell">Позолоченный штекер, тканевая оплетка</div>
+                    </div>
+                    <div class="product__table-row">Функции и управление</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Система активного шумоподавления</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Прозрачный звук</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Сенсорное управление</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Регулятор громкости</div>
+                        <div class="product__table-cell">Есть</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Функции клавиш</div>
+                        <div class="product__table-cell">Включение/выключение микрофона, включение/выключение объемного
+                            звука
+                        </div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Заявленная совместимость с консолями</div>
+                        <div class="product__table-cell">Nintendo Switch, PS4, PS5, Xbox Series X|S, Xbox one</div>
+                    </div>
+                    <div class="product__table-row">Питание</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Время работы на одном заряде</div>
+                        <div class="product__table-cell">до 10ч</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Поддержка беспроводной зарядки</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Быстрая зарядка</div>
+                        <div class="product__table-cell">Нет</div>
+                    </div>
+                    <div class="product__table-row">Дополнительная информация</div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Комплектация</div>
+                        <div class="product__table-cell">Аудиокабель соединительный 3 шт, микрофон, чехол</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Особенности, дополнительно</div>
+                        <div class="product__table-cell">Технология Waves Nx</div>
+                    </div>
+                    <div class="product__table-row">
+                        <div class="product__table-cell">Вес</div>
+                        <div class="product__table-cell">368г</div>
+                    </div>
+                    <br><br>
+                    <div class="product__grid">
+                        <img src="https://mychooz.com/wp-content/uploads/2020/07/img_2547.jpg">
+                        <img src="https://gadgetpage.ru/uploads/posts/2020-03/1584124044_9.jpg">
+                        <img
+                            src="https://doctorhead.ru/upload/resize_cache/iblock/7d0/g42bhkq7a1zkgziwuld4rlcfc03a0107/676_560_1/HyperX_Cloud_Orbit_S_Gun_Metal.jpg">
+                        <img src="https://tech-bit.ru/upload/iblock/a91/6da910c7f6c5b3f3f0ec69221e08fab3.jpg">
+                        <img src="https://tehnobzor.ru/wp-content/uploads/2020/02/hyperx-cloud-orbit-s-3.jpg">
+                    </div>
+                    <div class="product__detail">VIEW DETAILS</div>
+                    <div class="product__overlay"></div>
+                </div>
+
+            </div>
+    </section>
+</body>
+
+</html>
